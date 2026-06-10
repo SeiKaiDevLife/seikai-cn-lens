@@ -306,8 +306,8 @@ main {
     .hero-title { font-size: 32px; letter-spacing: 6px; padding-left: 6px; margin-bottom: 5px; }
     .hero-subtitle { font-size: 10px; letter-spacing: 3px; }
     .sticky-nav { gap: 30px; padding: 15px 0; margin-bottom: 20px; }
-    .timeline-row { flex-direction: column; gap: 24px; margin: 40px 0; }
-    .timeline-info { position: static; }
+    .timeline-row { flex-direction: column; gap: 16px; margin: 40px 0; }
+    .timeline-info { position: static; flex: auto; }
     .timeline-grid { gap: 4px; }
     .masonry-container { columns: 2 150px; column-gap: 8px; }
     main { padding: 0 20px 50px; }
