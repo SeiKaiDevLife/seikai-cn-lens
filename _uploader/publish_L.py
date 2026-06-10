@@ -47,8 +47,8 @@ def process_image_file(source_path, target_dir, yy_mm, folder_name, new_filename
             # 彻底删除原图
             os.remove(source_path)
             
-            rel_display = f"/gallery/landscape/{yy_mm}/{folder_name}/display/{webp_filename}"
-            rel_thumb = f"/gallery/landscape/{yy_mm}/{folder_name}/thumbnails/{webp_filename}"
+            rel_display = f"public/gallery/landscape/{yy_mm}/{folder_name}/display/{webp_filename}"
+            rel_thumb = f"public/gallery/landscape/{yy_mm}/{folder_name}/thumbnails/{webp_filename}"
             return rel_thumb, rel_display
     except Exception as e:
         print(f"处理出错 {source_path}: {e}")
