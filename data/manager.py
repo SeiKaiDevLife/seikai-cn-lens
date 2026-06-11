@@ -73,7 +73,7 @@ def search(kwargs):
             pass
 
     if results:
-        print("\n=== 🔍 查 询 结 果 ===")
+        print("\n=== 查询结果 ===")
         for r in results:
             print(r)
         print(f"\n共找到 {len(results)} 个匹配的实体相册。")
@@ -86,20 +86,20 @@ def delete(kwargs):
     title = kwargs.get('title')
     
     if not all([cat, date, title]):
-        print("❌ 删除操作必须提供 -c (分类), -d (日期), -t (标题) 参数！")
+        print("删除操作必须提供 -c (分类), -d (日期), -t (标题) 参数！")
         return
         
     folders = find_folders(cat, date, title)
     if not folders:
-        print("❌ 未找到对应相册文件夹，无法删除。")
+        print("未找到对应相册文件夹，无法删除。")
         return
         
     for target in folders:
-        print(f"🗑️ 正在彻底删除物理文件夹及底层数据: {target}")
+        print(f"正在彻底删除物理文件夹及底层数据: {target}")
         shutil.rmtree(target)
         
     build_db()
-    print("✅ 删除任务已完美执行。")
+    print("删除任务已完美执行。")
 
 def update(kwargs):
     cat = kwargs.get('cat')
@@ -165,10 +165,10 @@ def update(kwargs):
             f.write(content)
             
         os.rename(target, new_target)
-        print(f"🔄 文件夹物理重命名完成: {new_target}")
+        print(f"文件夹物理重命名完成: {new_target}")
         
     build_db()
-    print("✅ 相册数据修改已全网生效。")
+    print("相册数据修改已全网生效。")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="SeiKai 企业级静态库控制台")
