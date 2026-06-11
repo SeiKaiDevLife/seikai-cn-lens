@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SeiKai | Photography</title>
-    <link rel="stylesheet" href="index.css?v=13">
+    <link rel="stylesheet" href="index.css?v=14">
     <!-- 引入 Vue 3 CDN -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <!-- 引入高级字体 -->
@@ -96,6 +96,24 @@
             </div>
         </main>
 
+        <footer class="site-footer">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>Email: <a href="mailto:SeiKai_0930@outlook.com">SeiKai_0930@outlook.com</a></p>
+                    <p>公众号: 栅格影像</p>
+                    <p>小红书: 297278470</p>
+                </div>
+                <div class="footer-qrcode">
+                    <img src="public/qrcode.webp" alt="公众号: 栅格影像" loading="lazy">
+                    <p>扫码关注公众号</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 All rights reserved by SeiKai.</p>
+                <p>The images on this website are protected by copyright and may not be used without permission.</p>
+            </div>
+        </footer>
+
         <!-- 全屏深色灯箱 (Lightbox) -->
         <div class="lightbox" v-if="lightbox.isOpen" @click="closeLightbox">
             <div class="lightbox-close">×</div>
@@ -105,6 +123,6 @@
             </div>
         </div>
     </div>
-    <script src="app.js?v=6"></script>
+    <script src="app.js?v=7"></script>
 </body>
 </html>

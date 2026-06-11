@@ -28,9 +28,20 @@ createApp({
             }
         };
 
+        // 视差滚动特效
+        const handleScroll = () => {
+            if (!activeGallery.value) { // 仅在首页展示开屏时计算视差
+                const y = window.scrollY;
+                if (y < window.innerHeight) {
+                    document.documentElement.style.setProperty('--parallax-y', `${y * 0.5}px`);
+                }
+            }
+        };
+
         onMounted(async () => {
             updateColCount();
             window.addEventListener('resize', updateColCount);
+            window.addEventListener('scroll', handleScroll, { passive: true });
             
             try {
                 // 读取 JSON 数据（附加时间戳防止 GitHub Pages 缓存死数据）
