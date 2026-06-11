@@ -3,7 +3,7 @@ const { createApp, ref, computed, onMounted } = Vue;
 createApp({
     setup() {
         const photos = ref([]);
-        const filter = ref('landscape'); // landscape, girlfriend
+        const filter = ref('landscape'); // landscape, portrait
         
         const activeGallery = ref(null);
         
@@ -25,7 +25,7 @@ createApp({
 
         // 过滤数据逻辑
         const filteredPhotos = computed(() => {
-            const targetCategory = filter.value === 'landscape' ? 'L' : 'G';
+            const targetCategory = filter.value === 'landscape' ? 'L' : 'P';
             return photos.value.filter(p => p.category === targetCategory);
         });
 

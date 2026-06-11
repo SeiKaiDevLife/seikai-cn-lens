@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SeiKai | Photography</title>
-    <link rel="stylesheet" href="index.css?v=6">
+    <link rel="stylesheet" href="index.css?v=7">
     <!-- 引入 Vue 3 CDN -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <!-- 引入高级字体 -->
@@ -22,7 +22,7 @@
         <!-- 居中悬浮导航栏 (移除 All 选项) -->
         <nav class="sticky-nav">
             <div class="nav-item" :class="{active: filter==='landscape'}" @click="filter='landscape'">LANDSCAPE</div>
-            <div class="nav-item" :class="{active: filter==='girlfriend'}" @click="filter='girlfriend'">PORTRAITS</div>
+            <div class="nav-item" :class="{active: filter==='portrait'}" @click="filter='portrait'">PORTRAITS</div>
         </nav>
 
         <main>

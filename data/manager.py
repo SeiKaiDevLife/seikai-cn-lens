@@ -33,7 +33,7 @@ def build_db():
     print(f"[Manager] 编译成功！当前网页数据库共有 {len(all_entries)} 条渲染记录。")
 
 def find_folders(cat, date, title):
-    cat_dir = "landscape" if cat.upper() == "L" else "girlfriend"
+    cat_dir = "landscape" if cat.upper() == "L" else "portrait"
     try:
         yy_mm = date[2:7] # "2026-06-10" -> "26-06"
     except:
@@ -148,7 +148,7 @@ def update(kwargs):
             yy_mm = final_date[2:7]
         except:
             yy_mm = date[2:7]
-        cat_dir = "landscape" if cat.upper() == "L" else "girlfriend"
+        cat_dir = "landscape" if cat.upper() == "L" else "portrait"
         new_folder_name = f"{final_date} {final_title}"
         new_target = os.path.join(PUBLIC_GALLERY_DIR, cat_dir, yy_mm, new_folder_name)
         
@@ -174,7 +174,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="SeiKai 企业级静态库控制台")
     parser.add_argument("action", choices=["build", "search", "delete", "update"], help="操作指令: build(编译) search(查询) delete(删除) update(修改)")
     parser.add_argument("-k", "--keyword", help="关键词 (用于search)", default="")
-    parser.add_argument("-c", "--cat", help="分类 L 或 G")
+    parser.add_argument("-c", "--cat", help="分类 L 或 P")
     parser.add_argument("-d", "--date", help="原始日期 YYYY-MM-DD")
     parser.add_argument("-t", "--title", help="原始标题")
     parser.add_argument("--new-title", help="新标题 (用于update)")
