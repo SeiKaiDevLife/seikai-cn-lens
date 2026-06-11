@@ -13,7 +13,23 @@ createApp({
             item: null
         });
 
+        // 响应式计算瀑布流列数
+        const colCount = ref(3);
+        const updateColCount = () => {
+            const width = window.innerWidth;
+            if (width <= 768) {
+                colCount.value = 2;
+            } else if (width <= 1024) {
+                colCount.value = 3;
+            } else {
+                colCount.value = 4;
+            }
+        };
+
         onMounted(async () => {
+            updateColCount();
+            window.addEventListener('resize', updateColCount);
+            
             try {
                 // 读取 JSON 数据（附加时间戳防止 GitHub Pages 缓存死数据）
                 const res = await fetch('data/photos.json?' + new Date().getTime());
@@ -39,7 +55,12 @@ createApp({
                     currentMasonry.push(p);
                 } else {
                     if (currentMasonry.length > 0) {
-                        feed.push({ type: 'masonry', items: currentMasonry });
+                        const cols = Array.from({ length: colCount.value }, () => []);
+                        currentMasonry.forEach((mItem, idx) => {
+                            // 依次放入当前最短的列（近似为从左到右轮询）
+                            cols[idx % colCount.value].push(mItem);
+                        });
+                        feed.push({ type: 'masonry', cols: cols });
                         currentMasonry = [];
                     }
                     feed.push({ type: 'gallery', item: p });
@@ -47,7 +68,11 @@ createApp({
             });
             // 扫尾工作
             if (currentMasonry.length > 0) {
-                feed.push({ type: 'masonry', items: currentMasonry });
+                const cols = Array.from({ length: colCount.value }, () => []);
+                currentMasonry.forEach((mItem, idx) => {
+                    cols[idx % colCount.value].push(mItem);
+                });
+                feed.push({ type: 'masonry', cols: cols });
             }
             return feed;
         });
