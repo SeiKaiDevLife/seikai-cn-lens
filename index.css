@@ -53,13 +53,13 @@ body, html {
     pointer-events: none;
 }
 .hero-avatar {
-    width: clamp(80px, 65.45px + 3.88vw, 140px);
-    height: clamp(80px, 65.45px + 3.88vw, 140px);
-    margin-bottom: clamp(16px, 14px + 0.51vw, 24px);
+    width: 11.666vw;
+    height: 11.666vw;
+    margin-bottom: 2vw;
     border-radius: 50%;
     overflow: hidden;
-    border: 2px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 0.166vw solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0.833vw 2.5vw rgba(0, 0, 0, 0.5);
     transition: transform 0.4s ease, border-color 0.4s ease;
     animation: fadeInDown 0.8s ease-out;
     flex-shrink: 0;
@@ -79,21 +79,21 @@ body, html {
     to { opacity: 1; transform: translateY(0); }
 }
 .hero-logo {
-    height: clamp(60px, 45.45px + 3.88vw, 120px);
+    height: 10vw;
     object-fit: contain;
-    margin-bottom: clamp(12px, 10px + 0.5vw, 20px);
-    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.9));
+    margin-bottom: 1.666vw;
+    filter: drop-shadow(0 0.833vw 2.5vw rgba(0,0,0,0.9));
     animation: fadeInDown 0.8s ease-out;
     z-index: 1;
     flex-shrink: 0;
 }
 .hero-subtitle {
-    font-size: clamp(9px, 8.5px + 0.13vw, 11px);
-    letter-spacing: clamp(4px, 3px + 0.25vw, 8px);
+    font-size: 0.916vw;
+    letter-spacing: 0.666vw;
     color: #eee;
     text-transform: uppercase;
     font-weight: 300;
-    text-shadow: 0 4px 10px rgba(0,0,0,0.8);
+    text-shadow: 0 0.333vw 0.833vw rgba(0,0,0,0.8);
 }
 
 
@@ -124,13 +124,13 @@ body.is-scrolled.filter-sticky .global-blur-bg {
 .top-header {
     background: transparent;
     border: none;
-    height: 60px;
+    height: 5vw;
     display: flex;
     align-items: center;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     z-index: 200;
     transition: background 0.4s ease;
     box-sizing: border-box;
@@ -143,22 +143,23 @@ body.is-scrolled.filter-sticky .global-blur-bg {
 .top-nav-menu {
     display: flex;
     justify-content: center;
-    gap: clamp(10px, 2.8px + 1.94vw, 40px);
-    width: 100%;
+    gap: 6.666vw;
+    width: 50vw;
+    margin: 0 auto;
 }
 .top-nav-item {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    font-size: clamp(11px, 10.3px + 0.19vw, 14px);
+    font-size: 1.166vw;
     font-weight: 400;
-    letter-spacing: clamp(1px, 0.7px + 0.06vw, 2px);
+    letter-spacing: 0.166vw;
     color: #ffffff;
     cursor: pointer;
     transition: color 0.3s ease;
-    padding-bottom: 4px;
+    padding-bottom: 0.333vw;
     position: relative;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    text-shadow: 0 0.166vw 0.666vw rgba(0,0,0,0.8);
 }
 /* Reserve space for bold text to prevent jitter */
 .top-nav-item::before {
@@ -531,8 +532,6 @@ main {
 }
 
 @media (max-width: 768px) {
-    .top-header { padding: 0 10px; overflow-x: auto; white-space: nowrap; }
-    .top-nav-menu { justify-content: space-around; max-width: 400px; margin: 0 auto; padding: 0 5px; }
     .sticky-nav { padding: 4vw 5%; margin-bottom: 4vw; flex-direction: column; gap: 4vw; }
     .nav-menu { gap: 4vw; }
     .footer-content { gap: 40px; flex-direction: column; }
