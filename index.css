@@ -435,7 +435,7 @@ main {
     padding: 0;
 }
 .footer-logo {
-    width: min(50vw, 400px);
+    width: min(33.333vw, 300px);
     height: auto;
     object-fit: contain;
     filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
