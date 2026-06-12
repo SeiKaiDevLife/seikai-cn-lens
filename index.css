@@ -62,6 +62,7 @@ body, html {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     transition: transform 0.4s ease, border-color 0.4s ease;
     animation: fadeInDown 0.8s ease-out;
+    flex-shrink: 0;
 }
 .hero-avatar img {
     width: 100%;
@@ -78,12 +79,13 @@ body, html {
     to { opacity: 1; transform: translateY(0); }
 }
 .hero-logo {
-    height: 180px;
+    height: 120px;
     object-fit: contain;
     margin-bottom: 20px;
     filter: drop-shadow(0 10px 30px rgba(0,0,0,0.9));
     animation: fadeInDown 0.8s ease-out;
     z-index: 1;
+    flex-shrink: 0;
 }
 .hero-subtitle {
     font-size: 11px;
@@ -529,13 +531,15 @@ main {
 }
 
 @media (max-width: 768px) {
-    .hero-avatar { width: 100px; height: 100px; margin-bottom: 16px; }
-    .hero-logo { height: 120px; margin-bottom: 15px; }
-    .hero-subtitle { font-size: 10px; letter-spacing: 3px; }
-    .top-header { padding: 15px 5%; overflow-x: auto; white-space: nowrap; }
-    .top-nav-menu { gap: 20px; justify-content: flex-start; }
-    .sticky-nav { padding: 15px 5%; margin-bottom: 20px; flex-direction: column; gap: 20px; }
-    .nav-menu { gap: 20px; }
+    .hero { aspect-ratio: 2 / 1; padding: 0; min-height: auto; }
+    .hero-avatar { width: 18vw; height: 18vw; margin-bottom: 2vw; flex-shrink: 0; }
+    .hero-logo { height: 12vw; margin-bottom: 2vw; flex-shrink: 0; }
+    .hero-subtitle { font-size: 2.2vw; letter-spacing: 0.8vw; }
+    .top-header { padding: 0; overflow: hidden; height: 12vw; }
+    .top-nav-menu { gap: 0; justify-content: space-between; width: 90vw; margin: 0 auto; padding: 0; }
+    .top-nav-item { font-size: 3vw; letter-spacing: 0.2vw; padding-bottom: 0.5vw; }
+    .sticky-nav { padding: 4vw 5%; margin-bottom: 4vw; flex-direction: column; gap: 4vw; }
+    .nav-menu { gap: 4vw; }
     .footer-content { gap: 40px; flex-direction: column; }
     .timeline-row { flex-direction: column; gap: 16px; margin: 40px 0; }
     .timeline-info { position: static; flex: auto; }
