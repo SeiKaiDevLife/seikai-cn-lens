@@ -74,15 +74,13 @@ body, html {
     from { opacity: 0; transform: translateY(-20px); }
     to { opacity: 1; transform: translateY(0); }
 }
-.hero-title {
-    font-size: 32px;
-    font-weight: 700;
-    letter-spacing: 10px;
-    margin: 0 0 10px 0;
-    padding-left: 10px; /* offset the extra tracking */
-    text-transform: uppercase;
-    color: #fff;
-    text-shadow: 0 10px 30px rgba(0,0,0,0.9), 0 2px 10px rgba(0,0,0,0.5);
+.hero-logo {
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.9));
+    animation: fadeInDown 0.8s ease-out;
+    z-index: 1;
 }
 .hero-subtitle {
     font-size: 14px;
@@ -93,27 +91,61 @@ body, html {
     text-shadow: 0 4px 10px rgba(0,0,0,0.8);
 }
 
-/* ================= 悬浮导航栏 ================= */
-.sticky-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* ================= 全局顶部导航栏 ================= */
+.top-header {
+    background: rgba(5, 5, 5, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     padding: 15px 5%;
     position: sticky;
     top: 0;
+    z-index: 200;
+}
+.top-nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.top-nav-item {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding-bottom: 4px;
+    position: relative;
+}
+.top-nav-item:hover { color: var(--accent); }
+.top-nav-item.active {
+    color: var(--accent);
+    font-weight: 500;
+}
+.top-nav-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 2px;
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+
+/* ================= 悬浮导航栏 (L/P) ================= */
+.sticky-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 5%;
+    position: sticky;
+    top: 50px;
     background: rgba(10, 10, 10, 0.85);
     backdrop-filter: blur(12px);
     z-index: 100;
     border-bottom: 1px solid rgba(255,255,255,0.03);
     margin-bottom: 40px;
-}
-.nav-logo {
-    display: flex;
-    align-items: center;
-}
-.nav-logo img {
-    height: 30px; /* 控制 Logo 大小 */
-    object-fit: contain;
 }
 .nav-menu {
     display: flex;
@@ -433,10 +465,11 @@ main {
 .lightbox-caption {
     margin-bottom: 30px;
     font-size: 13px;
-    color: #999;
-    letter-spacing: 2px;
-    font-weight: 300;
-}
+         a n i m a t i o n :   f a d e I n D o w n   0 . 6 s   e a s e ; 
+ } 
+ . p l a c e h o l d e r - p a g e   h 2   { 
+         f o n t - s i z e :   3 2 p x ; 
+         m a r g i n - b o t t o m :   2 0 p x ; 
 
 /* ================= 移动端响应式 ================= */
 @media (max-width: 1200px) {
@@ -445,8 +478,10 @@ main {
 
 @media (max-width: 768px) {
     .hero-avatar { width: 100px; height: 100px; margin-bottom: 16px; }
-    .hero-title { font-size: 20px; letter-spacing: 4px; padding-left: 4px; margin-bottom: 5px; }
+    .hero-logo { height: 40px; margin-bottom: 10px; }
     .hero-subtitle { font-size: 10px; letter-spacing: 3px; }
+    .top-header { padding: 15px 5%; overflow-x: auto; white-space: nowrap; }
+    .top-nav-menu { gap: 20px; justify-content: flex-start; }
     .sticky-nav { padding: 15px 5%; margin-bottom: 20px; flex-direction: column; gap: 20px; }
     .nav-menu { gap: 20px; }
     .footer-content { gap: 40px; flex-direction: column; }
@@ -464,18 +499,16 @@ main {
     .justified-container { --target-height: 80px; gap: 4px; }
 }
 
- . p l a c e h o l d e r - p a g e   { 
-         t e x t - a l i g n :   c e n t e r ; 
-         p a d d i n g :   1 0 0 p x   2 0 p x ; 
-         c o l o r :   v a r ( - - t e x t - m u t e d ) ; 
-         a n i m a t i o n :   f a d e I n D o w n   0 . 6 s   e a s e ; 
- } 
- . p l a c e h o l d e r - p a g e   h 2   { 
-         f o n t - s i z e :   3 2 p x ; 
-         m a r g i n - b o t t o m :   2 0 p x ; 
-         c o l o r :   # f f f ; 
-         f o n t - w e i g h t :   5 0 0 ; 
-         l e t t e r - s p a c i n g :   2 p x ; 
- } 
-  
- 
+.placeholder-page {
+    text-align: center;
+    padding: 100px 20px;
+    color: var(--text-muted);
+    animation: fadeInDown 0.6s ease;
+}
+.placeholder-page h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 2px;
+}

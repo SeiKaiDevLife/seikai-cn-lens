@@ -4,6 +4,7 @@ createApp({
     setup() {
         const photos = ref([]);
         const filter = ref('landscape'); // landscape, portrait
+        const currentPage = ref('home'); // home, masterpieces, gear, about
         
         const activeGallery = ref(null);
         const savedScrollY = ref(0); // 记录滚动位置
@@ -161,7 +162,8 @@ createApp({
             lightbox, 
             openLightbox, 
             closeLightbox,
-            
+            filter,
+            currentPage,
             activeGallery, 
             openGallery, 
             closeGallery, 
