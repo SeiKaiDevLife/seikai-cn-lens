@@ -432,10 +432,11 @@ main {
     text-align: center;
 }
 .footer-logo-container {
-    padding: 60px 0 40px;
+    padding: 0;
 }
 .footer-logo {
-    height: 60px;
+    width: min(50vw, 400px);
+    height: auto;
     object-fit: contain;
     filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
 }
