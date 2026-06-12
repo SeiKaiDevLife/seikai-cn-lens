@@ -32,14 +32,38 @@ createApp({
         };
 
         // 视差滚动特效及头部透明度切换
+        const getStickyThreshold = () => {
+            const heroEl = document.querySelector('.hero');
+            const headerEl = document.querySelector('.top-header');
+            if (heroEl && headerEl) {
+                return heroEl.offsetHeight - headerEl.offsetHeight;
+            }
+            return 300; // fallback
+        };
+
+        let ticking = false;
         const handleScroll = () => {
-            const y = window.scrollY;
-            isScrolled.value = y > 50;
-            
-            if (!activeGallery.value) { // 仅在首页展示开屏时计算视差
-                if (y < window.innerHeight) {
-                    document.documentElement.style.setProperty('--parallax-y', `${y * 0.5}px`);
-                }
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const y = window.scrollY;
+                    isScrolled.value = y > 50;
+                    
+                    if (!activeGallery.value) { // 仅在首页展示开屏时计算视差
+                        if (y < window.innerHeight) {
+                            document.documentElement.style.setProperty('--parallax-y', `${y * 0.5}px`);
+                        }
+                    }
+
+                    // 动态计算毛玻璃过渡比例
+                    const threshold = getStickyThreshold();
+                    let progress = y / threshold;
+                    if (progress < 0) progress = 0;
+                    if (progress > 1) progress = 1;
+                    document.documentElement.style.setProperty('--nav-blur-progress', progress);
+
+                    ticking = false;
+                });
+                ticking = true;
             }
         };
 
@@ -146,15 +170,6 @@ createApp({
         const savedScroll = {
             landscape: 0,
             portrait: 0
-        };
-        
-        const getStickyThreshold = () => {
-            const heroEl = document.querySelector('.hero');
-            const headerEl = document.querySelector('.top-header');
-            if (heroEl && headerEl) {
-                return heroEl.offsetHeight - headerEl.offsetHeight;
-            }
-            return 300; // fallback
         };
 
         watch(filter, (newVal, oldVal) => {
