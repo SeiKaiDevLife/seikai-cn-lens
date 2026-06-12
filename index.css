@@ -53,9 +53,9 @@ body, html {
     pointer-events: none;
 }
 .hero-avatar {
-    width: 140px;
-    height: 140px;
-    margin-bottom: 24px;
+    width: clamp(80px, 65.45px + 3.88vw, 140px);
+    height: clamp(80px, 65.45px + 3.88vw, 140px);
+    margin-bottom: clamp(16px, 14px + 0.51vw, 24px);
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid rgba(255, 255, 255, 0.15);
@@ -79,17 +79,17 @@ body, html {
     to { opacity: 1; transform: translateY(0); }
 }
 .hero-logo {
-    height: 120px;
+    height: clamp(60px, 45.45px + 3.88vw, 120px);
     object-fit: contain;
-    margin-bottom: 20px;
+    margin-bottom: clamp(12px, 10px + 0.5vw, 20px);
     filter: drop-shadow(0 10px 30px rgba(0,0,0,0.9));
     animation: fadeInDown 0.8s ease-out;
     z-index: 1;
     flex-shrink: 0;
 }
 .hero-subtitle {
-    font-size: 11px;
-    letter-spacing: 8px;
+    font-size: clamp(9px, 8.5px + 0.13vw, 11px);
+    letter-spacing: clamp(4px, 3px + 0.25vw, 8px);
     color: #eee;
     text-transform: uppercase;
     font-weight: 300;
@@ -143,16 +143,16 @@ body.is-scrolled.filter-sticky .global-blur-bg {
 .top-nav-menu {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: clamp(10px, 2.8px + 1.94vw, 40px);
     width: 100%;
 }
 .top-nav-item {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    font-size: 14px;
+    font-size: clamp(11px, 10.3px + 0.19vw, 14px);
     font-weight: 400;
-    letter-spacing: 2px;
+    letter-spacing: clamp(1px, 0.7px + 0.06vw, 2px);
     color: #ffffff;
     cursor: pointer;
     transition: color 0.3s ease;
@@ -531,13 +531,8 @@ main {
 }
 
 @media (max-width: 768px) {
-    .hero { aspect-ratio: 2 / 1; padding: 0; min-height: auto; }
-    .hero-avatar { width: 18vw; height: 18vw; margin-bottom: 2vw; flex-shrink: 0; }
-    .hero-logo { height: 12vw; margin-bottom: 2vw; flex-shrink: 0; }
-    .hero-subtitle { font-size: 2.2vw; letter-spacing: 0.8vw; }
-    .top-header { padding: 0; overflow: hidden; height: 12vw; }
-    .top-nav-menu { gap: 0; justify-content: space-between; width: 90vw; margin: 0 auto; padding: 0; }
-    .top-nav-item { font-size: 3vw; letter-spacing: 0.2vw; padding-bottom: 0.5vw; }
+    .top-header { padding: 0 10px; overflow-x: auto; white-space: nowrap; }
+    .top-nav-menu { justify-content: space-around; max-width: 400px; margin: 0 auto; padding: 0 5px; }
     .sticky-nav { padding: 4vw 5%; margin-bottom: 4vw; flex-direction: column; gap: 4vw; }
     .nav-menu { gap: 4vw; }
     .footer-content { gap: 40px; flex-direction: column; }
