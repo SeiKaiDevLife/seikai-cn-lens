@@ -930,6 +930,10 @@ main {
     .m-nav-arrow {
         font-size: 2rem;
     }
+    .m-thumb {
+        flex: 0 0 calc((100% - 45px) / 4);
+        height: 48px;
+    }
 }
 @keyframes fadeIn {
     from { opacity: 0; }

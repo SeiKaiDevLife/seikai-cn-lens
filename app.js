@@ -143,6 +143,21 @@ createApp({
             });
         };
 
+        const homeScrollY = ref(0);
+        watch(currentPage, (newVal, oldVal) => {
+            if (oldVal === 'home') {
+                homeScrollY.value = window.scrollY;
+            }
+            
+            nextTick(() => {
+                if (newVal === 'home') {
+                    window.scrollTo({ top: homeScrollY.value, behavior: 'instant' });
+                } else {
+                    window.scrollTo(0, 0);
+                }
+            });
+        });
+
         // 获取当前组图专属界面下的所有大图数组
         const activeGalleryAllImages = computed(() => {
             if(!activeGallery.value) return [];
