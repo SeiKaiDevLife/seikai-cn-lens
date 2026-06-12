@@ -26,7 +26,7 @@ def process_image_file(source_path, target_dir, yy_mm, folder_name, new_filename
             if img.mode in ("RGBA", "P", "CMYK"):
                 img = img.convert("RGB")
             
-            disp_ratio = min(2160 / img.width, 2160 / img.height)
+            disp_ratio = min(1080 / img.width, 1080 / img.height)
             if disp_ratio < 1:
                 disp_size = (int(img.width * disp_ratio), int(img.height * disp_ratio))
                 disp_img = img.resize(disp_size, Image.Resampling.LANCZOS)
@@ -34,7 +34,7 @@ def process_image_file(source_path, target_dir, yy_mm, folder_name, new_filename
                 disp_img = img
             disp_img.save(display_path, 'WEBP', quality=85)
             
-            thumb_ratio = min(1000 / img.width, 1000 / img.height)
+            thumb_ratio = min(512 / img.width, 512 / img.height)
             if thumb_ratio < 1:
                 thumb_size = (int(img.width * thumb_ratio), int(img.height * thumb_ratio))
                 thumb_img = img.resize(thumb_size, Image.Resampling.LANCZOS)

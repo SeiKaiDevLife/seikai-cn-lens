@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SeiKai | Photography</title>
-    <link rel="stylesheet" href="index.css?v=16">
+    <link rel="stylesheet" href="index.css?v=18">
     <!-- 引入 Vue 3 CDN -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <!-- 引入高级字体 -->
@@ -22,10 +22,18 @@
             <p class="hero-subtitle">Photography Collection</p>
         </div>
 
-        <!-- 居中悬浮导航栏 (移除 All 选项) -->
+        <!-- 居中悬浮导航栏 (移除 All 选项，加入Logo与未来功能预留) -->
         <nav class="sticky-nav" v-if="!activeGallery">
-            <div class="nav-item" :class="{active: filter==='landscape'}" @click="filter='landscape'">LANDSCAPE</div>
-            <div class="nav-item" :class="{active: filter==='portrait'}" @click="filter='portrait'">PORTRAITS</div>
+            <div class="nav-logo">
+                <img src="public/logo.png" alt="SeiKai Logo">
+            </div>
+            <div class="nav-menu">
+                <div class="nav-item" :class="{active: filter==='landscape'}" @click="filter='landscape'">LANDSCAPE</div>
+                <div class="nav-item" :class="{active: filter==='portrait'}" @click="filter='portrait'">PORTRAITS</div>
+                <div class="nav-item" :class="{active: filter==='masterpieces'}" @click="filter='masterpieces'">MASTERPIECES</div>
+                <div class="nav-item" :class="{active: filter==='gear'}" @click="filter='gear'">GEAR</div>
+                <div class="nav-item" :class="{active: filter==='about'}" @click="filter='about'">ABOUT ME</div>
+            </div>
         </nav>
 
         <main>
@@ -48,7 +56,7 @@
             </div>
 
             <!-- 首页主瀑布流 (动态渲染风景或写真) -->
-            <div class="feed" v-else :key="filter">
+            <div class="feed" v-else-if="filter === 'landscape' || filter === 'portrait'" :key="filter">
                 <template v-for="(block, bIdx) in groupedFeed" :key="bIdx">
                     
                     <!-- 风景照：Justified Image Grid（横向两端对齐） -->
@@ -94,6 +102,24 @@
 
                 </template>
             </div>
+
+            <!-- 代表作页面占位符 -->
+            <div class="placeholder-page" v-else-if="filter === 'masterpieces'">
+                <h2>Masterpieces</h2>
+                <p>建设中，敬请期待...</p>
+            </div>
+
+            <!-- 拍摄设备页面占位符 -->
+            <div class="placeholder-page" v-else-if="filter === 'gear'">
+                <h2>Gear</h2>
+                <p>建设中，敬请期待...</p>
+            </div>
+
+            <!-- 关于我页面占位符 -->
+            <div class="placeholder-page" v-else-if="filter === 'about'">
+                <h2>About Me</h2>
+                <p>建设中，敬请期待...</p>
+            </div>
         </main>
 
         <footer class="site-footer">
@@ -103,9 +129,15 @@
                     <p>公众号: 栅格影像</p>
                     <p>小红书: 297278470</p>
                 </div>
-                <div class="footer-qrcode">
-                    <img src="public/qrcode.webp" alt="公众号: 栅格影像" loading="lazy">
-                    <p>扫码关注公众号</p>
+                <div class="footer-qrcodes">
+                    <div class="footer-qrcode">
+                        <img src="public/qrcode.webp" alt="公众号: 栅格影像" loading="lazy">
+                        <p>扫码关注公众号</p>
+                    </div>
+                    <div class="footer-qrcode">
+                        <img src="public/xiaohongshu-qrcode.webp" alt="小红书" loading="lazy">
+                        <p>扫码关注小红书</p>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -115,14 +147,18 @@
         </footer>
 
         <!-- 全屏深色灯箱 (Lightbox) -->
-        <div class="lightbox" v-if="lightbox.isOpen" @click="closeLightbox">
-            <div class="lightbox-close">×</div>
-            <img :src="lightbox.url" @click.stop>
+        <div class="lightbox" v-if="lightbox.isOpen" @click.self="closeLightbox">
+            <div class="lightbox-header">
+                <div class="lightbox-close" @click="closeLightbox">×</div>
+            </div>
+            <div class="lightbox-body" @click.self="closeLightbox">
+                <img :src="lightbox.url" @click.stop class="lightbox-img">
+            </div>
             <div class="lightbox-caption" v-if="lightbox.item">
                 {{ lightbox.item.title }} | {{ lightbox.item.date }} | {{ lightbox.item.location }}
             </div>
         </div>
     </div>
-    <script src="app.js?v=7"></script>
+    <script src="app.js?v=8"></script>
 </body>
 </html>
