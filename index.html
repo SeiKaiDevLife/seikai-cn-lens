@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SeiKai | Photography</title>
-    <link rel="stylesheet" href="index.css?v=52">
+    <link rel="stylesheet" href="index.css?v=53">
     <!-- 引入 Vue 3 CDN -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <!-- 引入高级字体 -->
@@ -116,7 +116,7 @@
                 <div class="m-slideshow" v-if="masterpieces.length > 0">
                     <!-- 缩略图导航带 -->
                     <div class="m-thumbs-wrapper">
-                        <button class="m-thumb-nav prev" @click="scrollThumbs(-1)">&#10094;</button>
+                        <button class="m-thumb-nav prev" @click="prevMasterpiece" :class="{ disabled: activeMIndex === 0 }">&#10094;</button>
                         <div class="m-thumbs" ref="thumbContainer">
                             <div class="m-thumb" 
                                  v-for="(m, index) in masterpieces" 
@@ -126,7 +126,7 @@
                                 <img :src="m.url" loading="lazy">
                             </div>
                         </div>
-                        <button class="m-thumb-nav next" @click="scrollThumbs(1)">&#10095;</button>
+                        <button class="m-thumb-nav next" @click="nextMasterpiece" :class="{ disabled: activeMIndex === masterpieces.length - 1 }">&#10095;</button>
                     </div>
 
                     <!-- 主图展示与切换 -->
@@ -283,7 +283,7 @@
             </div>
         </div>
     </div>
-    <script src="app.js?v=12"></script>
+    <script src="app.js?v=13"></script>
 
     <!-- Sticky Filter Background Unifier -->
     <script>

@@ -1,4 +1,4 @@
-const { createApp, ref, computed, onMounted, nextTick } = Vue;
+const { createApp, ref, computed, onMounted, nextTick, watch } = Vue;
 
 createApp({
     setup() {
@@ -179,11 +179,22 @@ createApp({
         };
 
         const thumbContainer = ref(null);
-        const scrollThumbs = (direction) => {
-            if(thumbContainer.value) {
-                thumbContainer.value.scrollBy({ left: direction * 300, behavior: 'smooth' });
-            }
+        
+        const centerThumbnail = (index) => {
+            nextTick(() => {
+                if (!thumbContainer.value) return;
+                const container = thumbContainer.value;
+                const activeThumb = container.children[index];
+                if (activeThumb) {
+                    const scrollLeft = activeThumb.offsetLeft - (container.clientWidth / 2) + (activeThumb.clientWidth / 2);
+                    container.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+                }
+            });
         };
+
+        watch(activeMIndex, (newVal) => {
+            centerThumbnail(newVal);
+        });
 
         return {
             photos, 
@@ -193,7 +204,6 @@ createApp({
             prevMasterpiece,
             nextMasterpiece,
             thumbContainer,
-            scrollThumbs,
             filter, 
             groupedFeed, 
             itemDateFormatter,
