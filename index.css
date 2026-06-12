@@ -212,14 +212,6 @@ body.filter-sticky .filter-nav {
     -webkit-backdrop-filter: none;
     border-bottom-color: transparent;
 }
-    background: rgba(10, 10, 10, 0.7);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    z-index: 100;
-    padding: 15px 0;
-    margin-bottom: 30px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
 .filter-btn {
     padding: 6px 18px;
     border: 1px solid rgba(255, 255, 255, 0.15);
