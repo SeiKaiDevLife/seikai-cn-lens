@@ -94,6 +94,30 @@ body, html {
     text-shadow: 0 4px 10px rgba(0,0,0,0.8);
 }
 
+
+/* ================= 统一毛玻璃背景层 ================= */
+.global-blur-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: transparent;
+    z-index: 50; /* 在主内容之上，但在导航文字和按钮之下 */
+    pointer-events: none;
+    transition: background 0.4s ease, height 0s;
+}
+body.is-scrolled .global-blur-bg {
+    height: 60px;
+    background: rgba(10, 10, 10, 0.7);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+body.is-scrolled.filter-sticky .global-blur-bg {
+    height: calc(60px + var(--filter-height, 58px));
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
 /* ================= 全局顶部导航栏 ================= */
 .top-header {
     background: transparent;
@@ -110,10 +134,9 @@ body, html {
     box-sizing: border-box;
 }
 .top-header.scrolled {
-    background: rgba(10, 10, 10, 0.7);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    /* 移除 border-bottom 避免接缝 */
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 }
 .top-nav-menu {
     display: flex;
@@ -166,7 +189,13 @@ body, html {
 }
 
 /* ================= 弱化版悬浮分类标签 (L/P) ================= */
-.filter-nav {
+.filter-nav {}
+body.filter-sticky .filter-nav {
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-bottom-color: transparent;
+}
     display: flex;
     justify-content: center;
     align-items: center;
