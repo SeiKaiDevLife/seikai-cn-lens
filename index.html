@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SeiKai | Photography</title>
-    <link rel="stylesheet" href="index.css?v=51">
+    <link rel="stylesheet" href="index.css?v=52">
     <!-- 引入 Vue 3 CDN -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <!-- 引入高级字体 -->
@@ -112,27 +112,61 @@
                     <h2>MASTERPIECES</h2>
                     <p>Proudest moments frozen in time</p>
                 </div>
-                <div class="m-list">
-                    <div class="m-item" v-for="m in masterpieces" :key="m.id">
-                        <div class="m-img-wrapper">
-                            <img :src="m.url" alt="Masterpiece" loading="lazy">
+                
+                <div class="m-slideshow" v-if="masterpieces.length > 0">
+                    <!-- 缩略图导航带 -->
+                    <div class="m-thumbs-wrapper">
+                        <button class="m-thumb-nav prev" @click="scrollThumbs(-1)">&#10094;</button>
+                        <div class="m-thumbs" ref="thumbContainer">
+                            <div class="m-thumb" 
+                                 v-for="(m, index) in masterpieces" 
+                                 :key="m.id"
+                                 :class="{ active: activeMIndex === index }"
+                                 @click="activeMIndex = index">
+                                <img :src="m.url" loading="lazy">
+                            </div>
                         </div>
-                        <div class="m-info">
+                        <button class="m-thumb-nav next" @click="scrollThumbs(1)">&#10095;</button>
+                    </div>
+
+                    <!-- 主图展示与切换 -->
+                    <div class="m-main-viewer" v-if="activeMasterpiece">
+                        <div class="m-main-img-container">
+                            <!-- 左切换区 -->
+                            <div class="m-nav-zone left" @click="prevMasterpiece" :class="{ disabled: activeMIndex === 0 }">
+                                <span class="m-nav-arrow">&#10094;</span>
+                            </div>
+                            
+                            <img :src="activeMasterpiece.url" class="m-main-img" :key="activeMasterpiece.id">
+                            
+                            <!-- 右切换区 -->
+                            <div class="m-nav-zone right" @click="nextMasterpiece" :class="{ disabled: activeMIndex === masterpieces.length - 1 }">
+                                <span class="m-nav-arrow">&#10095;</span>
+                            </div>
+                        </div>
+                        
+                        <!-- 底部信息 -->
+                        <div class="m-main-info" :key="'info-'+activeMasterpiece.id">
                             <div class="m-meta">
-                                <span class="m-date">{{ m.date }}</span>
+                                <span class="m-date">{{ activeMasterpiece.date }}</span>
                                 <span class="m-dot">·</span>
-                                <span class="m-loc">{{ m.location }}</span>
+                                <span class="m-loc">{{ activeMasterpiece.location }}</span>
                             </div>
-                            <div class="m-section">
-                                <h4>SHOOTING</h4>
-                                <p>{{ m.shooting_idea }}</p>
-                            </div>
-                            <div class="m-section">
-                                <h4>POST-PROCESSING</h4>
-                                <p>{{ m.post_idea }}</p>
+                            <div class="m-info-grid">
+                                <div class="m-section">
+                                    <h4>SHOOTING</h4>
+                                    <p>{{ activeMasterpiece.shooting_idea }}</p>
+                                </div>
+                                <div class="m-section">
+                                    <h4>POST-PROCESSING</h4>
+                                    <p>{{ activeMasterpiece.post_idea }}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div v-else style="text-align: center; color: #888; padding: 100px 0;">
+                    暂无代表作数据
                 </div>
             </div>
 
@@ -249,7 +283,7 @@
             </div>
         </div>
     </div>
-    <script src="app.js?v=11"></script>
+    <script src="app.js?v=12"></script>
 
     <!-- Sticky Filter Background Unifier -->
     <script>

@@ -168,9 +168,32 @@ createApp({
             return [...masterpieces.value].sort((a, b) => new Date(b.date) - new Date(a.date));
         });
 
+        const activeMIndex = ref(0);
+        const activeMasterpiece = computed(() => sortedMasterpieces.value[activeMIndex.value]);
+
+        const prevMasterpiece = () => {
+            if (activeMIndex.value > 0) activeMIndex.value--;
+        };
+        const nextMasterpiece = () => {
+            if (activeMIndex.value < sortedMasterpieces.value.length - 1) activeMIndex.value++;
+        };
+
+        const thumbContainer = ref(null);
+        const scrollThumbs = (direction) => {
+            if(thumbContainer.value) {
+                thumbContainer.value.scrollBy({ left: direction * 300, behavior: 'smooth' });
+            }
+        };
+
         return {
             photos, 
             masterpieces: sortedMasterpieces,
+            activeMIndex,
+            activeMasterpiece,
+            prevMasterpiece,
+            nextMasterpiece,
+            thumbContainer,
+            scrollThumbs,
             filter, 
             groupedFeed, 
             itemDateFormatter,
