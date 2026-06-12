@@ -201,8 +201,12 @@ createApp({
                 const container = thumbContainer.value;
                 const activeThumb = container.children[index];
                 if (activeThumb) {
-                    const scrollLeft = activeThumb.offsetLeft - (container.clientWidth / 2) + (activeThumb.clientWidth / 2);
-                    container.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+                    const containerRect = container.getBoundingClientRect();
+                    const thumbRect = activeThumb.getBoundingClientRect();
+                    const thumbCenter = thumbRect.left + (thumbRect.width / 2);
+                    const containerCenter = containerRect.left + (containerRect.width / 2);
+                    const offset = thumbCenter - containerCenter;
+                    container.scrollBy({ left: offset, behavior: 'smooth' });
                 }
             });
         };
