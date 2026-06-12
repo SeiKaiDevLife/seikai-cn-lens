@@ -575,3 +575,56 @@ main {
     font-weight: 500;
     letter-spacing: 2px;
 }
+
+/* ================= 关于我 (About Me) ================= */
+.about-page {
+    display: flex;
+    justify-content: center;
+    padding: 100px 5% 50px;
+    animation: fadeInDown 0.8s ease;
+}
+.about-container {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+.about-photo {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+.about-tag {
+    font-size: clamp(20px, 2.5vw, 28px);
+    font-weight: 400;
+    color: #fff;
+    margin: 0 0 12px 0;
+    letter-spacing: 4px;
+}
+.about-style {
+    font-size: clamp(12px, 1.2vw, 14px);
+    font-weight: 300;
+    color: rgba(255,255,255,0.5);
+    margin: 0 0 40px 0;
+    letter-spacing: 6px;
+}
+.about-desc {
+    font-size: clamp(13px, 1.2vw, 15px);
+    line-height: 2;
+    color: var(--text-muted);
+    font-weight: 300;
+    text-align: center;
+    margin: 0 auto;
+    letter-spacing: 1px;
+}
+@media (max-width: 768px) {
+    .about-page {
+        padding: 80px 5% 40px;
+    }
+    .about-desc {
+        text-align: left;
+    }
+}
