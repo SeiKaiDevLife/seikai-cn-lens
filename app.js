@@ -220,6 +220,15 @@ createApp({
             }
         });
 
+        watch([currentPage, activeGallery], () => {
+            const isSubpage = currentPage.value !== 'home' || activeGallery.value;
+            if (isSubpage) {
+                document.body.classList.add('is-subpage');
+            } else {
+                document.body.classList.remove('is-subpage');
+            }
+        }, { immediate: true });
+
         watch(currentPage, (newVal, oldVal) => {
             if (oldVal === 'home') {
                 savedScroll[filter.value] = window.scrollY;
