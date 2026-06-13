@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SeiKai | Photography</title>
-    <link rel="stylesheet" href="index.css?v=62">
+    <link rel="stylesheet" href="index.css?v=63">
     <!-- 引入 Vue 3 CDN -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <!-- 引入高级字体 -->
@@ -42,6 +42,11 @@
         <main>
             <!-- 沉浸式组图专属浏览页 (单列排布) -->
             <div class="dedicated-gallery" v-if="activeGallery">
+                <div class="gallery-header">
+                    <h1>{{ activeGallery.title }}</h1>
+                    <p>{{ itemDateFormatter(activeGallery.date) }} · {{ activeGallery.location }}</p>
+                </div>
+                
                 <div class="back-nav" @click="closeGallery">
                     <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="19" y1="12" x2="5" y2="12"></line>
@@ -49,10 +54,7 @@
                     </svg>
                     <span>返回主页</span>
                 </div>
-                <div class="gallery-header">
-                    <h1>{{ activeGallery.title }}</h1>
-                    <p>{{ itemDateFormatter(activeGallery.date) }} · {{ activeGallery.location }}</p>
-                </div>
+
                 <div class="gallery-full-list">
                     <img v-for="(img, idx) in activeGalleryAllImages" :key="idx" :src="img" loading="lazy">
                 </div>
