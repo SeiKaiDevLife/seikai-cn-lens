@@ -6,6 +6,7 @@
     "location": "杭州",
     "category": "L",
     "thumbnail": "public/gallery/landscape/20-01/2020-01-16 杭州/1.webp",
-    "display": "public/gallery/landscape/20-01/2020-01-16 杭州/1.webp"
+    "display": "public/gallery/landscape/20-01/2020-01-16 杭州/1.webp",
+    "aspectRatio": 0.7278
   }
 ]

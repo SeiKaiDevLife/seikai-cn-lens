@@ -6,7 +6,8 @@
     "location": "北京",
     "category": "L",
     "thumbnail": "public/gallery/landscape/23-05/2023-05-16 北京/1.webp",
-    "display": "public/gallery/landscape/23-05/2023-05-16 北京/1.webp"
+    "display": "public/gallery/landscape/23-05/2023-05-16 北京/1.webp",
+    "aspectRatio": 0.6602
   },
   {
     "id": "land-2023-05-16-北京-2",
@@ -15,7 +16,8 @@
     "location": "北京",
     "category": "L",
     "thumbnail": "public/gallery/landscape/23-05/2023-05-16 北京/2.webp",
-    "display": "public/gallery/landscape/23-05/2023-05-16 北京/2.webp"
+    "display": "public/gallery/landscape/23-05/2023-05-16 北京/2.webp",
+    "aspectRatio": 1.5004
   },
   {
     "id": "land-2023-05-16-北京-3",
@@ -24,7 +26,8 @@
     "location": "北京",
     "category": "L",
     "thumbnail": "public/gallery/landscape/23-05/2023-05-16 北京/3.webp",
-    "display": "public/gallery/landscape/23-05/2023-05-16 北京/3.webp"
+    "display": "public/gallery/landscape/23-05/2023-05-16 北京/3.webp",
+    "aspectRatio": 0.6665
   },
   {
     "id": "land-2023-05-16-北京-4",
@@ -33,7 +36,8 @@
     "location": "北京",
     "category": "L",
     "thumbnail": "public/gallery/landscape/23-05/2023-05-16 北京/4.webp",
-    "display": "public/gallery/landscape/23-05/2023-05-16 北京/4.webp"
+    "display": "public/gallery/landscape/23-05/2023-05-16 北京/4.webp",
+    "aspectRatio": 0.6665
   },
   {
     "id": "land-2023-05-16-北京-5",
@@ -42,7 +46,8 @@
     "location": "北京",
     "category": "L",
     "thumbnail": "public/gallery/landscape/23-05/2023-05-16 北京/5.webp",
-    "display": "public/gallery/landscape/23-05/2023-05-16 北京/5.webp"
+    "display": "public/gallery/landscape/23-05/2023-05-16 北京/5.webp",
+    "aspectRatio": 1.5004
   },
   {
     "id": "land-2023-05-16-北京-6",
@@ -51,7 +56,8 @@
     "location": "北京",
     "category": "L",
     "thumbnail": "public/gallery/landscape/23-05/2023-05-16 北京/6.webp",
-    "display": "public/gallery/landscape/23-05/2023-05-16 北京/6.webp"
+    "display": "public/gallery/landscape/23-05/2023-05-16 北京/6.webp",
+    "aspectRatio": 0.6665
   },
   {
     "id": "land-2023-05-16-北京-7",
@@ -60,7 +66,8 @@
     "location": "北京",
     "category": "L",
     "thumbnail": "public/gallery/landscape/23-05/2023-05-16 北京/7.webp",
-    "display": "public/gallery/landscape/23-05/2023-05-16 北京/7.webp"
+    "display": "public/gallery/landscape/23-05/2023-05-16 北京/7.webp",
+    "aspectRatio": 0.6665
   },
   {
     "id": "land-2023-05-16-北京-8",
@@ -69,7 +76,8 @@
     "location": "北京",
     "category": "L",
     "thumbnail": "public/gallery/landscape/23-05/2023-05-16 北京/8.webp",
-    "display": "public/gallery/landscape/23-05/2023-05-16 北京/8.webp"
+    "display": "public/gallery/landscape/23-05/2023-05-16 北京/8.webp",
+    "aspectRatio": 0.6697
   },
   {
     "id": "land-2023-05-16-北京-9",
@@ -78,7 +86,8 @@
     "location": "北京",
     "category": "L",
     "thumbnail": "public/gallery/landscape/23-05/2023-05-16 北京/9.webp",
-    "display": "public/gallery/landscape/23-05/2023-05-16 北京/9.webp"
+    "display": "public/gallery/landscape/23-05/2023-05-16 北京/9.webp",
+    "aspectRatio": 0.6665
   },
   {
     "id": "land-2023-05-16-北京-10",
@@ -87,7 +96,8 @@
     "location": "北京",
     "category": "L",
     "thumbnail": "public/gallery/landscape/23-05/2023-05-16 北京/10.webp",
-    "display": "public/gallery/landscape/23-05/2023-05-16 北京/10.webp"
+    "display": "public/gallery/landscape/23-05/2023-05-16 北京/10.webp",
+    "aspectRatio": 0.656
   },
   {
     "id": "land-2023-05-16-北京-11",
@@ -96,7 +106,8 @@
     "location": "北京",
     "category": "L",
     "thumbnail": "public/gallery/landscape/23-05/2023-05-16 北京/11.webp",
-    "display": "public/gallery/landscape/23-05/2023-05-16 北京/11.webp"
+    "display": "public/gallery/landscape/23-05/2023-05-16 北京/11.webp",
+    "aspectRatio": 1.5004
   },
   {
     "id": "land-2023-05-16-北京-12",
@@ -105,7 +116,8 @@
     "location": "北京",
     "category": "L",
     "thumbnail": "public/gallery/landscape/23-05/2023-05-16 北京/12.webp",
-    "display": "public/gallery/landscape/23-05/2023-05-16 北京/12.webp"
+    "display": "public/gallery/landscape/23-05/2023-05-16 北京/12.webp",
+    "aspectRatio": 0.6665
   },
   {
     "id": "land-2023-05-16-北京-13",
@@ -114,7 +126,8 @@
     "location": "北京",
     "category": "L",
     "thumbnail": "public/gallery/landscape/23-05/2023-05-16 北京/13.webp",
-    "display": "public/gallery/landscape/23-05/2023-05-16 北京/13.webp"
+    "display": "public/gallery/landscape/23-05/2023-05-16 北京/13.webp",
+    "aspectRatio": 0.6665
   },
   {
     "id": "land-2023-05-16-北京-14",
@@ -123,7 +136,8 @@
     "location": "北京",
     "category": "L",
     "thumbnail": "public/gallery/landscape/23-05/2023-05-16 北京/14.webp",
-    "display": "public/gallery/landscape/23-05/2023-05-16 北京/14.webp"
+    "display": "public/gallery/landscape/23-05/2023-05-16 北京/14.webp",
+    "aspectRatio": 0.6665
   },
   {
     "id": "land-2023-05-16-北京-15",
@@ -132,7 +146,8 @@
     "location": "北京",
     "category": "L",
     "thumbnail": "public/gallery/landscape/23-05/2023-05-16 北京/15.webp",
-    "display": "public/gallery/landscape/23-05/2023-05-16 北京/15.webp"
+    "display": "public/gallery/landscape/23-05/2023-05-16 北京/15.webp",
+    "aspectRatio": 0.6665
   },
   {
     "id": "land-2023-05-16-北京-16",
@@ -141,7 +156,8 @@
     "location": "北京",
     "category": "L",
     "thumbnail": "public/gallery/landscape/23-05/2023-05-16 北京/16.webp",
-    "display": "public/gallery/landscape/23-05/2023-05-16 北京/16.webp"
+    "display": "public/gallery/landscape/23-05/2023-05-16 北京/16.webp",
+    "aspectRatio": 0.6306
   },
   {
     "id": "land-2023-05-16-北京-17",
@@ -150,7 +166,8 @@
     "location": "北京",
     "category": "L",
     "thumbnail": "public/gallery/landscape/23-05/2023-05-16 北京/17.webp",
-    "display": "public/gallery/landscape/23-05/2023-05-16 北京/17.webp"
+    "display": "public/gallery/landscape/23-05/2023-05-16 北京/17.webp",
+    "aspectRatio": 1.5004
   },
   {
     "id": "land-2023-05-16-北京-18",
@@ -159,7 +176,8 @@
     "location": "北京",
     "category": "L",
     "thumbnail": "public/gallery/landscape/23-05/2023-05-16 北京/18.webp",
-    "display": "public/gallery/landscape/23-05/2023-05-16 北京/18.webp"
+    "display": "public/gallery/landscape/23-05/2023-05-16 北京/18.webp",
+    "aspectRatio": 0.6665
   },
   {
     "id": "land-2023-05-16-北京-19",
@@ -168,7 +186,8 @@
     "location": "北京",
     "category": "L",
     "thumbnail": "public/gallery/landscape/23-05/2023-05-16 北京/19.webp",
-    "display": "public/gallery/landscape/23-05/2023-05-16 北京/19.webp"
+    "display": "public/gallery/landscape/23-05/2023-05-16 北京/19.webp",
+    "aspectRatio": 0.6367
   },
   {
     "id": "land-2023-05-16-北京-20",
@@ -177,7 +196,8 @@
     "location": "北京",
     "category": "L",
     "thumbnail": "public/gallery/landscape/23-05/2023-05-16 北京/20.webp",
-    "display": "public/gallery/landscape/23-05/2023-05-16 北京/20.webp"
+    "display": "public/gallery/landscape/23-05/2023-05-16 北京/20.webp",
+    "aspectRatio": 0.6665
   },
   {
     "id": "land-2023-05-16-北京-21",
@@ -186,7 +206,8 @@
     "location": "北京",
     "category": "L",
     "thumbnail": "public/gallery/landscape/23-05/2023-05-16 北京/21.webp",
-    "display": "public/gallery/landscape/23-05/2023-05-16 北京/21.webp"
+    "display": "public/gallery/landscape/23-05/2023-05-16 北京/21.webp",
+    "aspectRatio": 1.416
   },
   {
     "id": "land-2023-05-16-北京-22",
@@ -195,7 +216,8 @@
     "location": "北京",
     "category": "L",
     "thumbnail": "public/gallery/landscape/23-05/2023-05-16 北京/22.webp",
-    "display": "public/gallery/landscape/23-05/2023-05-16 北京/22.webp"
+    "display": "public/gallery/landscape/23-05/2023-05-16 北京/22.webp",
+    "aspectRatio": 0.6665
   },
   {
     "id": "land-2023-05-16-北京-23",
@@ -204,7 +226,8 @@
     "location": "北京",
     "category": "L",
     "thumbnail": "public/gallery/landscape/23-05/2023-05-16 北京/23.webp",
-    "display": "public/gallery/landscape/23-05/2023-05-16 北京/23.webp"
+    "display": "public/gallery/landscape/23-05/2023-05-16 北京/23.webp",
+    "aspectRatio": 0.6799
   },
   {
     "id": "land-2023-05-16-北京-24",
@@ -213,7 +236,8 @@
     "location": "北京",
     "category": "L",
     "thumbnail": "public/gallery/landscape/23-05/2023-05-16 北京/24.webp",
-    "display": "public/gallery/landscape/23-05/2023-05-16 北京/24.webp"
+    "display": "public/gallery/landscape/23-05/2023-05-16 北京/24.webp",
+    "aspectRatio": 1.5004
   },
   {
     "id": "land-2023-05-16-北京-25",
@@ -222,6 +246,7 @@
     "location": "北京",
     "category": "L",
     "thumbnail": "public/gallery/landscape/23-05/2023-05-16 北京/25.webp",
-    "display": "public/gallery/landscape/23-05/2023-05-16 北京/25.webp"
+    "display": "public/gallery/landscape/23-05/2023-05-16 北京/25.webp",
+    "aspectRatio": 4.989
   }
 ]

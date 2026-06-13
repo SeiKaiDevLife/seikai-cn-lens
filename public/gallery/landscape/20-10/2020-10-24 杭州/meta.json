@@ -6,7 +6,8 @@
     "location": "杭州",
     "category": "L",
     "thumbnail": "public/gallery/landscape/20-10/2020-10-24 杭州/1.webp",
-    "display": "public/gallery/landscape/20-10/2020-10-24 杭州/1.webp"
+    "display": "public/gallery/landscape/20-10/2020-10-24 杭州/1.webp",
+    "aspectRatio": 0.6665
   },
   {
     "id": "land-2020-10-24-杭州-2",
@@ -15,6 +16,7 @@
     "location": "杭州",
     "category": "L",
     "thumbnail": "public/gallery/landscape/20-10/2020-10-24 杭州/2.webp",
-    "display": "public/gallery/landscape/20-10/2020-10-24 杭州/2.webp"
+    "display": "public/gallery/landscape/20-10/2020-10-24 杭州/2.webp",
+    "aspectRatio": 0.6665
   }
 ]

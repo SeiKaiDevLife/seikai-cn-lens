@@ -6,7 +6,8 @@
     "location": "杭州",
     "category": "L",
     "thumbnail": "public/gallery/landscape/21-03/2021-03-26 杭州/1.webp",
-    "display": "public/gallery/landscape/21-03/2021-03-26 杭州/1.webp"
+    "display": "public/gallery/landscape/21-03/2021-03-26 杭州/1.webp",
+    "aspectRatio": 1.4597
   },
   {
     "id": "land-2021-03-26-杭州-2",
@@ -15,7 +16,8 @@
     "location": "杭州",
     "category": "L",
     "thumbnail": "public/gallery/landscape/21-03/2021-03-26 杭州/2.webp",
-    "display": "public/gallery/landscape/21-03/2021-03-26 杭州/2.webp"
+    "display": "public/gallery/landscape/21-03/2021-03-26 杭州/2.webp",
+    "aspectRatio": 0.6839
   },
   {
     "id": "land-2021-03-26-杭州-3",
@@ -24,7 +26,8 @@
     "location": "杭州",
     "category": "L",
     "thumbnail": "public/gallery/landscape/21-03/2021-03-26 杭州/3.webp",
-    "display": "public/gallery/landscape/21-03/2021-03-26 杭州/3.webp"
+    "display": "public/gallery/landscape/21-03/2021-03-26 杭州/3.webp",
+    "aspectRatio": 1.6404
   },
   {
     "id": "land-2021-03-26-杭州-4",
@@ -33,6 +36,7 @@
     "location": "杭州",
     "category": "L",
     "thumbnail": "public/gallery/landscape/21-03/2021-03-26 杭州/4.webp",
-    "display": "public/gallery/landscape/21-03/2021-03-26 杭州/4.webp"
+    "display": "public/gallery/landscape/21-03/2021-03-26 杭州/4.webp",
+    "aspectRatio": 1.7305
   }
 ]

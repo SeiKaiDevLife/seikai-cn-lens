@@ -6,7 +6,8 @@
     "location": "杭州",
     "category": "L",
     "thumbnail": "public/gallery/landscape/19-07/2019-07-02 杭州/1.webp",
-    "display": "public/gallery/landscape/19-07/2019-07-02 杭州/1.webp"
+    "display": "public/gallery/landscape/19-07/2019-07-02 杭州/1.webp",
+    "aspectRatio": 1.5004
   },
   {
     "id": "land-2019-07-02-杭州-2",
@@ -15,7 +16,8 @@
     "location": "杭州",
     "category": "L",
     "thumbnail": "public/gallery/landscape/19-07/2019-07-02 杭州/2.webp",
-    "display": "public/gallery/landscape/19-07/2019-07-02 杭州/2.webp"
+    "display": "public/gallery/landscape/19-07/2019-07-02 杭州/2.webp",
+    "aspectRatio": 0.6665
   },
   {
     "id": "land-2019-07-02-杭州-3",
@@ -24,6 +26,7 @@
     "location": "杭州",
     "category": "L",
     "thumbnail": "public/gallery/landscape/19-07/2019-07-02 杭州/3.webp",
-    "display": "public/gallery/landscape/19-07/2019-07-02 杭州/3.webp"
+    "display": "public/gallery/landscape/19-07/2019-07-02 杭州/3.webp",
+    "aspectRatio": 1.5004
   }
 ]

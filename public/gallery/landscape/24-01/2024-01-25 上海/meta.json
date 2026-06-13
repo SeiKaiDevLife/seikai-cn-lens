@@ -6,7 +6,8 @@
     "location": "上海",
     "category": "L",
     "thumbnail": "public/gallery/landscape/24-01/2024-01-25 上海/1.webp",
-    "display": "public/gallery/landscape/24-01/2024-01-25 上海/1.webp"
+    "display": "public/gallery/landscape/24-01/2024-01-25 上海/1.webp",
+    "aspectRatio": 1.5004
   },
   {
     "id": "land-2024-01-25-上海-2",
@@ -15,7 +16,8 @@
     "location": "上海",
     "category": "L",
     "thumbnail": "public/gallery/landscape/24-01/2024-01-25 上海/2.webp",
-    "display": "public/gallery/landscape/24-01/2024-01-25 上海/2.webp"
+    "display": "public/gallery/landscape/24-01/2024-01-25 上海/2.webp",
+    "aspectRatio": 0.6665
   },
   {
     "id": "land-2024-01-25-上海-3",
@@ -24,7 +26,8 @@
     "location": "上海",
     "category": "L",
     "thumbnail": "public/gallery/landscape/24-01/2024-01-25 上海/3.webp",
-    "display": "public/gallery/landscape/24-01/2024-01-25 上海/3.webp"
+    "display": "public/gallery/landscape/24-01/2024-01-25 上海/3.webp",
+    "aspectRatio": 1.5004
   },
   {
     "id": "land-2024-01-25-上海-4",
@@ -33,7 +36,8 @@
     "location": "上海",
     "category": "L",
     "thumbnail": "public/gallery/landscape/24-01/2024-01-25 上海/4.webp",
-    "display": "public/gallery/landscape/24-01/2024-01-25 上海/4.webp"
+    "display": "public/gallery/landscape/24-01/2024-01-25 上海/4.webp",
+    "aspectRatio": 0.6665
   },
   {
     "id": "land-2024-01-25-上海-5",
@@ -42,7 +46,8 @@
     "location": "上海",
     "category": "L",
     "thumbnail": "public/gallery/landscape/24-01/2024-01-25 上海/5.webp",
-    "display": "public/gallery/landscape/24-01/2024-01-25 上海/5.webp"
+    "display": "public/gallery/landscape/24-01/2024-01-25 上海/5.webp",
+    "aspectRatio": 0.6665
   },
   {
     "id": "land-2024-01-25-上海-6",
@@ -51,7 +56,8 @@
     "location": "上海",
     "category": "L",
     "thumbnail": "public/gallery/landscape/24-01/2024-01-25 上海/6.webp",
-    "display": "public/gallery/landscape/24-01/2024-01-25 上海/6.webp"
+    "display": "public/gallery/landscape/24-01/2024-01-25 上海/6.webp",
+    "aspectRatio": 0.6665
   },
   {
     "id": "land-2024-01-25-上海-7",
@@ -60,7 +66,8 @@
     "location": "上海",
     "category": "L",
     "thumbnail": "public/gallery/landscape/24-01/2024-01-25 上海/7.webp",
-    "display": "public/gallery/landscape/24-01/2024-01-25 上海/7.webp"
+    "display": "public/gallery/landscape/24-01/2024-01-25 上海/7.webp",
+    "aspectRatio": 0.6665
   },
   {
     "id": "land-2024-01-25-上海-8",
@@ -69,7 +76,8 @@
     "location": "上海",
     "category": "L",
     "thumbnail": "public/gallery/landscape/24-01/2024-01-25 上海/8.webp",
-    "display": "public/gallery/landscape/24-01/2024-01-25 上海/8.webp"
+    "display": "public/gallery/landscape/24-01/2024-01-25 上海/8.webp",
+    "aspectRatio": 0.6665
   },
   {
     "id": "land-2024-01-25-上海-9",
@@ -78,7 +86,8 @@
     "location": "上海",
     "category": "L",
     "thumbnail": "public/gallery/landscape/24-01/2024-01-25 上海/9.webp",
-    "display": "public/gallery/landscape/24-01/2024-01-25 上海/9.webp"
+    "display": "public/gallery/landscape/24-01/2024-01-25 上海/9.webp",
+    "aspectRatio": 1.5004
   },
   {
     "id": "land-2024-01-25-上海-10",
@@ -87,7 +96,8 @@
     "location": "上海",
     "category": "L",
     "thumbnail": "public/gallery/landscape/24-01/2024-01-25 上海/10.webp",
-    "display": "public/gallery/landscape/24-01/2024-01-25 上海/10.webp"
+    "display": "public/gallery/landscape/24-01/2024-01-25 上海/10.webp",
+    "aspectRatio": 0.6665
   },
   {
     "id": "land-2024-01-25-上海-11",
@@ -96,7 +106,8 @@
     "location": "上海",
     "category": "L",
     "thumbnail": "public/gallery/landscape/24-01/2024-01-25 上海/11.webp",
-    "display": "public/gallery/landscape/24-01/2024-01-25 上海/11.webp"
+    "display": "public/gallery/landscape/24-01/2024-01-25 上海/11.webp",
+    "aspectRatio": 0.6665
   },
   {
     "id": "land-2024-01-25-上海-12",
@@ -105,7 +116,8 @@
     "location": "上海",
     "category": "L",
     "thumbnail": "public/gallery/landscape/24-01/2024-01-25 上海/12.webp",
-    "display": "public/gallery/landscape/24-01/2024-01-25 上海/12.webp"
+    "display": "public/gallery/landscape/24-01/2024-01-25 上海/12.webp",
+    "aspectRatio": 0.6665
   },
   {
     "id": "land-2024-01-25-上海-13",
@@ -114,7 +126,8 @@
     "location": "上海",
     "category": "L",
     "thumbnail": "public/gallery/landscape/24-01/2024-01-25 上海/13.webp",
-    "display": "public/gallery/landscape/24-01/2024-01-25 上海/13.webp"
+    "display": "public/gallery/landscape/24-01/2024-01-25 上海/13.webp",
+    "aspectRatio": 0.6665
   },
   {
     "id": "land-2024-01-25-上海-14",
@@ -123,6 +136,7 @@
     "location": "上海",
     "category": "L",
     "thumbnail": "public/gallery/landscape/24-01/2024-01-25 上海/14.webp",
-    "display": "public/gallery/landscape/24-01/2024-01-25 上海/14.webp"
+    "display": "public/gallery/landscape/24-01/2024-01-25 上海/14.webp",
+    "aspectRatio": 0.6674
   }
 ]

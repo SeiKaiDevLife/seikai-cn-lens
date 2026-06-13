@@ -6,7 +6,8 @@
     "location": "德清",
     "category": "L",
     "thumbnail": "public/gallery/landscape/20-08/2020-08-12 德清/1.webp",
-    "display": "public/gallery/landscape/20-08/2020-08-12 德清/1.webp"
+    "display": "public/gallery/landscape/20-08/2020-08-12 德清/1.webp",
+    "aspectRatio": 0.6665
   },
   {
     "id": "land-2020-08-12-德清-2",
@@ -15,7 +16,8 @@
     "location": "德清",
     "category": "L",
     "thumbnail": "public/gallery/landscape/20-08/2020-08-12 德清/2.webp",
-    "display": "public/gallery/landscape/20-08/2020-08-12 德清/2.webp"
+    "display": "public/gallery/landscape/20-08/2020-08-12 德清/2.webp",
+    "aspectRatio": 0.6665
   },
   {
     "id": "land-2020-08-12-德清-3",
@@ -24,6 +26,7 @@
     "location": "德清",
     "category": "L",
     "thumbnail": "public/gallery/landscape/20-08/2020-08-12 德清/3.webp",
-    "display": "public/gallery/landscape/20-08/2020-08-12 德清/3.webp"
+    "display": "public/gallery/landscape/20-08/2020-08-12 德清/3.webp",
+    "aspectRatio": 0.6667
   }
 ]

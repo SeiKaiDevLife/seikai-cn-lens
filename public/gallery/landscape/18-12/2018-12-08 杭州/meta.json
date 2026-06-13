@@ -6,7 +6,8 @@
     "location": "杭州",
     "category": "L",
     "thumbnail": "public/gallery/landscape/18-12/2018-12-08 杭州/1.webp",
-    "display": "public/gallery/landscape/18-12/2018-12-08 杭州/1.webp"
+    "display": "public/gallery/landscape/18-12/2018-12-08 杭州/1.webp",
+    "aspectRatio": 2.0302
   },
   {
     "id": "land-2018-12-08-杭州-2",
@@ -15,6 +16,7 @@
     "location": "杭州",
     "category": "L",
     "thumbnail": "public/gallery/landscape/18-12/2018-12-08 杭州/2.webp",
-    "display": "public/gallery/landscape/18-12/2018-12-08 杭州/2.webp"
+    "display": "public/gallery/landscape/18-12/2018-12-08 杭州/2.webp",
+    "aspectRatio": 1.5004
   }
 ]

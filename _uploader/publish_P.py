@@ -53,6 +53,7 @@ def main():
 
     date_str = info.get('date', '2026-01-01')
     location = info.get('location', '未命名地点')
+    title = info.get('title', '')
     try:
         dt = datetime.strptime(date_str, '%Y-%m-%d')
         yy_mm = dt.strftime('%y-%m')
@@ -116,6 +117,7 @@ def main():
         "id": entry_id,
         "type": "gallery",
         "date": date_str,
+        "title": title,
         "location": location,
         "category": "P",
         "layout": processed_layout,
