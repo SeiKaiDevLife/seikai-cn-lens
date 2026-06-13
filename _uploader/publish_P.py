@@ -12,41 +12,29 @@ INFO_JSON = os.path.join(UPLOADER_DIR, 'info_P.json')
 PUBLIC_GALLERY_DIR = os.path.join(BASE_DIR, 'public', 'gallery')
 
 def process_image_file(source_path, target_dir, yy_mm, folder_name, new_filename):
-    display_dir = os.path.join(target_dir, 'display')
-    thumb_dir = os.path.join(target_dir, 'thumbnails')
-    os.makedirs(display_dir, exist_ok=True)
-    os.makedirs(thumb_dir, exist_ok=True)
+    os.makedirs(target_dir, exist_ok=True)
     
     webp_filename = f"{new_filename}.webp"
-    display_path = os.path.join(display_dir, webp_filename)
-    thumb_path = os.path.join(thumb_dir, webp_filename)
+    target_path = os.path.join(target_dir, webp_filename)
     
     try:
         with Image.open(source_path) as img:
             if img.mode in ("RGBA", "P", "CMYK"):
                 img = img.convert("RGB")
             
-            disp_ratio = min(1080 / img.width, 1080 / img.height)
+            target_max = 4096
+            disp_ratio = min(target_max / img.width, target_max / img.height)
             if disp_ratio < 1:
                 disp_size = (int(img.width * disp_ratio), int(img.height * disp_ratio))
                 disp_img = img.resize(disp_size, Image.Resampling.LANCZOS)
             else:
                 disp_img = img
-            disp_img.save(display_path, 'WEBP', quality=85)
-            
-            thumb_ratio = min(512 / img.width, 512 / img.height)
-            if thumb_ratio < 1:
-                thumb_size = (int(img.width * thumb_ratio), int(img.height * thumb_ratio))
-                thumb_img = img.resize(thumb_size, Image.Resampling.LANCZOS)
-            else:
-                thumb_img = img
-            thumb_img.save(thumb_path, 'WEBP', quality=80)
+            disp_img.save(target_path, 'WEBP', quality=85)
             
             os.remove(source_path)
             
-            rel_display = f"public/gallery/portrait/{yy_mm}/{folder_name}/display/{webp_filename}"
-            rel_thumb = f"public/gallery/portrait/{yy_mm}/{folder_name}/thumbnails/{webp_filename}"
-            return rel_thumb, rel_display
+            rel_path = f"public/gallery/portrait/{yy_mm}/{folder_name}/{webp_filename}"
+            return rel_path, rel_path
     except Exception as e:
         print(f"处理出错 {source_path}: {e}")
         return None, None
@@ -63,15 +51,15 @@ def main():
             print("解析 info_P.json 失败:", e)
             return
 
-    title = info.get('title', '未命名写真')
     date_str = info.get('date', '2026-01-01')
+    location = info.get('location', '未命名地点')
     try:
         dt = datetime.strptime(date_str, '%Y-%m-%d')
         yy_mm = dt.strftime('%y-%m')
     except:
         yy_mm = "26-01"
         
-    folder_name = f"{date_str} {title}"
+    folder_name = f"{date_str} {location}"
     target_dir = os.path.join(PUBLIC_GALLERY_DIR, "portrait", yy_mm, folder_name)
 
     if not os.path.exists(IMAGES_DIR):
@@ -123,15 +111,13 @@ def main():
             processed_others.append({"thumbnail": thumb, "display": disp})
             processed_count += 1
 
-    entry_id = f"port-{date_str}-{title}"
+    entry_id = f"port-{date_str}-{location}"
     new_entry = {
         "id": entry_id,
         "type": "gallery",
-        "title": title,
         "date": date_str,
-        "location": info.get('location', ''),
+        "location": location,
         "category": "P",
-        "tags": info.get('tags', []),
         "layout": processed_layout,
         "others": processed_others
     }
