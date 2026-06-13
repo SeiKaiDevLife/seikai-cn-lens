@@ -428,6 +428,9 @@ main {
     display: block;
     border-radius: 4px;
 }
+.gallery-full-list img:last-child {
+    margin-bottom: 0;
+}
 
 /* ================= 页脚 (Footer) ================= */
 .site-footer {
@@ -639,7 +642,7 @@ main {
 
 /* ================= 器材 (Gear) ================= */
 .gear-page {
-    padding: 100px 5% 50px;
+    padding: 50px 5%;
     animation: fadeInDown 0.8s ease;
     max-width: 1400px;
     margin: 0 auto;
@@ -732,11 +735,7 @@ main {
 .gear-list li:hover::before {
     background: #fff;
 }
-@media (max-width: 768px) {
-    .gear-page {
-        padding: 80px 5% 0;
-    }
-}
+/* Removed gear-page mobile override */
 
 /* ================= 代表作 (Masterpieces) ================= */
 .masterpieces-page {
