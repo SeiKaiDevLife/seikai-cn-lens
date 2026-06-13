@@ -939,12 +939,12 @@ main {
     display: inline-block;
 }
 .m-section p {
-    display: inline-block;
+    width: fit-content;
+    margin: 0 auto;
     font-size: 14px;
     line-height: 1.8;
     font-weight: 300;
     color: #bbb;
-    margin: 0;
     text-align: left;
     max-width: 100%;
 }
