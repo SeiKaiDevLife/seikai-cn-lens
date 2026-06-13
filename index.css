@@ -392,10 +392,10 @@ main {
 /* ================= 组图沉浸式专属页 ================= */
 .dedicated-gallery {
     max-width: 800px;
-    margin: 40px auto 0;
+    margin: clamp(50px, 5vw, 60px) auto 0;
     animation: fadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
-.gallery-header { margin-top: clamp(140px, 15vw, 160px); text-align: center; margin-bottom: 80px; }
+.gallery-header { padding-top: 40px; margin-top: 0; text-align: center; margin-bottom: 80px; }
 .gallery-header h1 { font-size: 40px; margin: 0 0 16px; font-weight: 600; }
 .gallery-header p { color: var(--text-muted); margin: 0; letter-spacing: 1px; font-weight: 300;}
 
@@ -407,7 +407,7 @@ main {
     cursor: pointer;
     font-size: 14px;
     letter-spacing: 1px;
-    position: fixed;
+    position: sticky;
     top: clamp(50px, 5vw, 60px);
     left: 0;
     width: 100%;
