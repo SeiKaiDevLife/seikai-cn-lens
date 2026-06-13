@@ -1,0 +1,20 @@
+[
+  {
+    "id": "land-2020-10-24-杭州-1",
+    "type": "single",
+    "date": "2020-10-24",
+    "location": "杭州",
+    "category": "L",
+    "thumbnail": "public/gallery/landscape/20-10/2020-10-24 杭州/1.webp",
+    "display": "public/gallery/landscape/20-10/2020-10-24 杭州/1.webp"
+  },
+  {
+    "id": "land-2020-10-24-杭州-2",
+    "type": "single",
+    "date": "2020-10-24",
+    "location": "杭州",
+    "category": "L",
+    "thumbnail": "public/gallery/landscape/20-10/2020-10-24 杭州/2.webp",
+    "display": "public/gallery/landscape/20-10/2020-10-24 杭州/2.webp"
+  }
+]

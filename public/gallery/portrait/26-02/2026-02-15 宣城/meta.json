@@ -1,0 +1,39 @@
+{
+  "id": "port-2026-02-15-宣城",
+  "type": "gallery",
+  "date": "2026-02-15",
+  "location": "宣城",
+  "category": "P",
+  "layout": {
+    "cover": {
+      "thumbnail": "public/gallery/portrait/26-02/2026-02-15 宣城/cover.webp",
+      "display": "public/gallery/portrait/26-02/2026-02-15 宣城/cover.webp"
+    },
+    "grid_1": {
+      "thumbnail": "public/gallery/portrait/26-02/2026-02-15 宣城/1.webp",
+      "display": "public/gallery/portrait/26-02/2026-02-15 宣城/1.webp"
+    },
+    "grid_2": {
+      "thumbnail": "public/gallery/portrait/26-02/2026-02-15 宣城/2.webp",
+      "display": "public/gallery/portrait/26-02/2026-02-15 宣城/2.webp"
+    },
+    "grid_3": {
+      "thumbnail": "public/gallery/portrait/26-02/2026-02-15 宣城/3.webp",
+      "display": "public/gallery/portrait/26-02/2026-02-15 宣城/3.webp"
+    },
+    "grid_4": {
+      "thumbnail": "public/gallery/portrait/26-02/2026-02-15 宣城/4.webp",
+      "display": "public/gallery/portrait/26-02/2026-02-15 宣城/4.webp"
+    },
+    "grid_5": {
+      "thumbnail": "public/gallery/portrait/26-02/2026-02-15 宣城/5.webp",
+      "display": "public/gallery/portrait/26-02/2026-02-15 宣城/5.webp"
+    }
+  },
+  "others": [
+    {
+      "thumbnail": "public/gallery/portrait/26-02/2026-02-15 宣城/6.webp",
+      "display": "public/gallery/portrait/26-02/2026-02-15 宣城/6.webp"
+    }
+  ]
+}

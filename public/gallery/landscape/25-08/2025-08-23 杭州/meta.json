@@ -1,0 +1,38 @@
+[
+  {
+    "id": "land-2025-08-23-杭州-1",
+    "type": "single",
+    "date": "2025-08-23",
+    "location": "杭州",
+    "category": "L",
+    "thumbnail": "public/gallery/landscape/25-08/2025-08-23 杭州/1.webp",
+    "display": "public/gallery/landscape/25-08/2025-08-23 杭州/1.webp"
+  },
+  {
+    "id": "land-2025-08-23-杭州-2",
+    "type": "single",
+    "date": "2025-08-23",
+    "location": "杭州",
+    "category": "L",
+    "thumbnail": "public/gallery/landscape/25-08/2025-08-23 杭州/2.webp",
+    "display": "public/gallery/landscape/25-08/2025-08-23 杭州/2.webp"
+  },
+  {
+    "id": "land-2025-08-23-杭州-3",
+    "type": "single",
+    "date": "2025-08-23",
+    "location": "杭州",
+    "category": "L",
+    "thumbnail": "public/gallery/landscape/25-08/2025-08-23 杭州/3.webp",
+    "display": "public/gallery/landscape/25-08/2025-08-23 杭州/3.webp"
+  },
+  {
+    "id": "land-2025-08-23-杭州-4",
+    "type": "single",
+    "date": "2025-08-23",
+    "location": "杭州",
+    "category": "L",
+    "thumbnail": "public/gallery/landscape/25-08/2025-08-23 杭州/4.webp",
+    "display": "public/gallery/landscape/25-08/2025-08-23 杭州/4.webp"
+  }
+]
